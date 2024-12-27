@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/update_teacher/{{view.id}}" method="post">
+        {% csrf_token %}
+        <input type="text" name="first_name" value="{{data.first_name}}">
+        <input type="text" name="last_name" value="{{data.last_name}}">
+        <input type="email" name="email" value="{{data.email}}">
+        <input type="number" name="phone_num" value="{{view.phone_number}}">
+        <input type="text" name="address" value="{{view.address}}">
+        <input type="submit" value="update">
+    </form>
+</body>
+</html>
